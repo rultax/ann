@@ -4,14 +4,12 @@
  */
 package com.sward.ann;
 
-import java.util.Collection;
-
 /**
  *
  * @author scottw
  */
-public interface ThresholdFunction {
-    
-    public float calculateThreshold(Collection<Float> input);
+public interface ActivationFunction {
+
+    public float applyActivationFunction(float inputSum);
     
 }
