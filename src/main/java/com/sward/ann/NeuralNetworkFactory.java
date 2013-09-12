@@ -36,9 +36,9 @@ public class NeuralNetworkFactory {
         for(int i = 0; i < layers.size() - 1; i++){
             List<Neuron> layer = layers.get(i);                    
             for(int j = 0; j < layer.size(); j++){
-                Connection c = createConnection();
-                layer.get(j).addOutputConnection(c);
                 for(Neuron n : layers.get(i + 1)){
+                    Connection c = createConnection();
+                    layer.get(j).addOutputConnection(c);
                     n.addInputConnection(c);
                 }
             }

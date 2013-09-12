@@ -14,7 +14,7 @@ public class App
         ActivationFunction activationFunction = new SigmoidActivationFunction();
         
         NeuralNetworkFactory factory = new NeuralNetworkFactory(activationFunction);
-        NeuralNetwork network = factory.createRandomNeuralNetwork(1, 2, 2);
+        NeuralNetwork network = factory.createRandomNeuralNetwork(1, 2, 1);
         
         List<Float> input = Arrays.asList(1f, 0f);
         List<Float> result = network.calculatePass(input);
